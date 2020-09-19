@@ -8,3 +8,5 @@ app = Celery('tasks', broker="redis://localhost:6379/0", backend="redis://localh
 def show_time():
     time.sleep(10)
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+#run: celery -A celery_test worker --loglevel=info
